@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+    <title>Guess the number!!</title>
+</head>
+<body>
+    <header>
+        <h1>Guess the number</h1>
+        <button class="again-btn">PlayAgain!</button>
+        <span>&lt;Between 1 to 30&gt;</span>
+    </header>
+    <main class="container">
+        <section class="number-section">
+            <div class="number">?</div>
+            <div class="line"></div>
+        </section>
+        <section class="score-section">
+            <div class="guessNumber">
+                <input id="guess" type="number" min="1" max="30">
+                <button id="check">Check</button>
+            </div>
+            <div class="stats">
+                <p class="msg">Start Guessing......</p>
+                <span class="score-label">score:</span><span id="score">20</span>
+                <br>
+                <span class="highscore-label">Highscore:</span><span id="highscore">0</span>
+            </div>
+        </section>
+        
+    </main>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
