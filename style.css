@@ -183,4 +183,7 @@ header span {
   .stats {
     margin-top: 2rem;
   }
+  .score-section {
+    margin-top: 4rem;
+  }
 }
