@@ -1,130 +1,186 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Orbitron', tahoma;
-    background-color: rgba(0, 0, 0, 0.712);
-    color: white;
-    /* background-color: yellowgreen; */
+body {
+  font-family: "Orbitron", tahoma;
+  background-color: rgba(0, 0, 0, 0.712);
+  color: white;
+  /* background-color: yellowgreen; */
 }
-header{
-    margin: 1.2rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-content: center;
+header {
+  margin: 1.2rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
 }
-header h1{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 6rem;
-    font-size: 3rem;
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 6rem;
+  font-size: 3rem;
 }
-.again-btn{
-    position: absolute;
-    left: 0;
-    font-family: 'Orbitron';
-    font-weight: 600;
-    padding: 0.8rem;
-    margin-top: 2.5rem;
+.again-btn {
+  position: absolute;
+  left: 0;
+  font-family: "Orbitron";
+  font-weight: 600;
+  padding: 0.8rem;
+  margin-top: 2.5rem;
+  margin-left: 1rem;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.again-btn:hover {
+  background-color: black;
+  color: white;
+}
+.again-btn:active {
+  transform: translateY(1px);
+}
+header span {
+  position: absolute;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-size: 1.6rem;
+}
+.container {
+  margin-top: 10rem;
+  position: relative;
+}
+.number-section {
+  display: flex;
+}
+.number {
+  margin: 2rem auto;
+  font-size: 3rem;
+  font-weight: bolder;
+  background-color: white;
+  color: black;
+  width: 6rem;
+  text-align: center;
+  padding: 1rem 1.3rem;
+  z-index: 1;
+}
+.line {
+  width: 100%;
+  background-color: white;
+  height: 1vh;
+  position: absolute;
+  margin-top: 4.5rem;
+}
+
+.score-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.guessNumber {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 9rem;
+  justify-content: center;
+}
+#guess {
+  margin: 2rem;
+  width: 10rem;
+  height: 4rem;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bolder;
+  font-family: "Orbitron";
+  border: none;
+}
+
+#check {
+  padding: 0.5rem 1.2rem;
+  font-size: 2rem;
+  font-family: "Orbitron";
+  cursor: pointer;
+  text-align: center;
+  border: none;
+}
+#check:hover {
+  background-color: black;
+  color: white;
+}
+#check:active {
+  transform: translateY(1px);
+}
+.stats {
+  margin-right: 9rem;
+  font-size: 2rem;
+}
+.stats p {
+  margin-bottom: 2rem;
+  margin-top: 1.3rem;
+}
+.stats span {
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 970px) {
+  header h1 {
+    font-size: 2rem;
+    margin-top: 8rem;
+  }
+  .guessNumber {
     margin-left: 1rem;
-    border: none;
-    font-size: 1.3rem;
-    cursor: pointer;
+  }
+  .stats {
+    margin-right: 3rem;
+    font-size: 1.5rem;
+  }
 }
-.again-btn:hover{
-    background-color: black;
-    color: white;
-    
-}
-.again-btn:active{
-    transform: translateY(1px);
-}
-header span{
-    position: absolute;
-    right: 0;
+@media screen and (max-width: 450px) {
+  header span {
+    font-size: 1rem;
+    margin-right: 0rem;
     margin-top: 1rem;
-    margin-right: 1rem;
-    font-size: 1.6rem;
-}
-.container{
+  }
+  header h1 {
+    font-size: 1.3rem;
     margin-top: 10rem;
-    position: relative;
-}
-.number-section{
-    display: flex;
-}
-.number{
-    margin: 2rem auto;
-    font-size: 3rem;
-    font-weight: bolder;
-    background-color: white;
-    color: black;
-    width: 6rem;
     text-align: center;
-    padding: 1rem 1.3rem;
-    z-index: 1;
-}
-.line{
-    width: 100%;
-    background-color: white;
-    height: 1vh;
-    position: absolute;
-    margin-top: 4.5rem;
-}
-
-.score-section{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-.guessNumber{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: 9rem;
-    justify-content: center;
-}
-#guess{
-    margin: 2rem;
-    width: 10rem;
-    height: 4rem;
-    text-align: center;
-    font-size: 3rem;
-    font-weight: bolder;
-    font-family: 'Orbitron';
-    border: none;
-}
-
-#check{
-    padding: 0.5rem 1.2rem;
-    font-size: 2rem;
-    font-family: 'Orbitron';
-    cursor: pointer;
-    text-align: center;
-    border: none;
-}
-#check:hover{
-    background-color: black;
-    color: white;
-    
-}
-#check:active{
-    transform: translateY(1px);
-}
-.stats{
-    margin-right: 9rem;
-    font-size: 2rem;
-}
-.stats p{
-    margin-bottom: 2rem;
-    margin-top: 1.3rem;
-}
-.stats span{
-    padding-right: 1rem;
+    line-height: 1;
+  }
+  .again-btn {
+    padding: 0.3rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .guessNumber {
+    margin-left: 0.3rem;
+  }
+  #guess {
+    margin: 1rem;
+    width: 5rem;
+    height: 2rem;
+    font-size: 1.6rem;
+  }
+  #check {
+    padding: 0.2rem 0.7rem;
+    font-size: 1.4rem;
+  }
+  .stats {
+    font-size: 1.3rem;
+    margin-left: 1.2rem;
+  }
+  .number {
+    margin: 0rem auto;
+  }
+  .line {
+    margin-top: 2.5rem;
+  }
+  .stats {
+    margin-top: 2rem;
+  }
 }
